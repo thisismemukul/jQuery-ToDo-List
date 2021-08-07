@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete-ToDo-List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .complete {
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>To-Do List<i class="fa fa-plus"></i></h1>
+        <input type="text" placeholder="Add new todo">
+        <ul>
+            <li><span><i class="fa fa-trash"></i></span> Learn Javascript</li>
+            <li><span><i class="fa fa-trash"></i></span> Learn Node Js</li>
+            <li><span><i class="fa fa-trash"></i></span> Hands on React</li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/lib/jquery-3.6.0.js"></script>
+<script>
+    $("ul").on("click", "li", function() {
+        $(this).toggleClass("complete");
+    });
+    $("ul").on("click", "span", function() {
+        $(this).parent().fadeOut(500, function() {
+            $(this).remove();
+        });
+    });
+    $("input[type='text']").keypress(function(event) {
+        if (event.which === 13) {
+            var addToDo = $(this).val();
+            $(this).val("");
+            $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + addToDo + "</li>");
+        }
+    });
+</script>
+
+</html>
