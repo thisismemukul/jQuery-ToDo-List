@@ -1,6 +1,6 @@
 # RGB-Guessing-Game
 <p align="center">
-<a href="#"><img title="THISISME" src="https://github.com/thisismemukul/RGBGuessingGame/blob/main/game.png"></a>
+<a href="#"><img title="ToDo List Demo" src="https://github.com/thisismemukul/jQuery-ToDo-List/blob/main/assets/img/todo.png"></a>
 </p>
 This ToDo List project in jQuery:
 Users can enter task they have to complete, keep track of the tasks to complete as well as completed tasks by marking them complete(click on the tasks for a strike-through). The user can remove a task.
