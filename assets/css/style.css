@@ -20,7 +20,7 @@ canvas {
     background-color: #1b1c22;
 }
 
-body h1 {
+h1 {
     text-transform: uppercase;
     color: #fcfcfc;
     text-align: center;
